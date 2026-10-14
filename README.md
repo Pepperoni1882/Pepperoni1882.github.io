@@ -1,2 +1,2 @@
 # Pepperoni1882.github.io
-#i hat Adam zehr
+Get a random insult for Adam Zehr
