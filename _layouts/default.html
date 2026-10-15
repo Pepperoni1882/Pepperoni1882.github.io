@@ -9,31 +9,35 @@
   <body>
     <div class="container">
       <section id="main_content">
-        <ol type="1" id="insults" name="insults" hidden>
+        <ol type="1" id="insults" hidden>
           <li>Fuck you </li>
           <li>Shittings</li>
           <li>Milk</li>
         </ol>
+        <dialog id="Insulter">
+          <h3>Insult Generator</h3>
+          <p id="Insult_msg"></p>
+          <button onclick="document.getElementById('Insulter').close()">OK</button>
+        </dialog>
         <script>
           const list = document.getElementById('insults');
           const insults = list.children;
           const min = 0;
           const max = insults.length;
+          var title = document.getElementById('Insulter');
+          var msg = document.getElementById('Insult_msg');
           
           function show_list_iten() {
             var index = Math.floor(Math.random() * max);
             if (insults[index]) {
-              alert(insults[index].textContent);
+              msg.textContent = insults[index].textContent.trim();
+              title.showModal();
             } else {
               alert('Index out of bounds!');
               }
             }
         </script>
-        <dialog id="customAlert">
-        <h3>Insult Generator</h3>
-        <p id="modalMessage"></p>
-        <button onclick="document.getElementById('customAlert').close()">OK</button>
-        </dialog>
+        <button onclick="show_list_iten()">For Insult</button>
       </section>
     </div>
   </body>
