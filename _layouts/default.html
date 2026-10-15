@@ -9,16 +9,23 @@
   <body>
     <div class="container">
       <section id="main_content">
-        <ol>
-          <li>Coffee</li>
-          <li>Tea</li>
+        <ol type="1" id="insults" name="insults hidden">
+          <li>Fuck you </li>
+          <li>Shittings</li>
           <li>Milk</li>
         </ol>
-        <form>
-          <label for="name">Enter the Name</label><br>
-          <input type="text" id="name" name="name"><br>
-        </form>
-        <button onclick="alert('fuck you ' + document.getElementById('name').value)">For Insult</button>
+        <script>
+          const list = document.getElementById('insults');
+          const insults = list.children;
+          function show_list_iten(index) {
+            if (items[index]) {
+              alert(items[index].textContent);
+            } else {
+              alert('Index out of bounds!');
+              }
+            }
+        </script>
+        <button onclick="show_list_iten(0)")">For Insult</button>
       </section>
     </div>
   </body>
