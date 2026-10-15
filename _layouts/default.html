@@ -29,7 +29,11 @@
               }
             }
         </script>
-        <button onclick="show_list_iten()">For Insult</button>
+        <dialog id="customAlert">
+        <h3>Insult Generator</h3>
+        <p id="modalMessage"></p>
+        <button onclick="document.getElementById('customAlert').close()">OK</button>
+        </dialog>
       </section>
     </div>
   </body>
