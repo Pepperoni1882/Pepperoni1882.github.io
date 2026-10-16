@@ -10,68 +10,12 @@
         background-color: #000000;
         color: #ffffff; /* Ensures text remains readable on a black background */
       }
-      dialog {
-        background-color: #000000; /* Changes the background color */
-        color: #24A6C7;            /* Changes the text color to contrast */
-        border: 5px solid #24A6C7; /* Optional: overrides default border */
-        border-radius: 8px;        /* Optional: rounds the corners */
-        padding: 20px;
-        font-weight: bold;
-      }
-      .Centered_div {
-        display: grid;
-        place-items: center;  /* Centers horizontally and vertically */
-        min-height: 100vh;/* Takes up the full height of the screen */
-      }
-      .Insult_Button {
-        color:#24A6C7;
-        font-weight: bold;
-        background-color: #000000;
-        border: 2px solid #24A6C7;
-        border-radius: 5px; 
-        padding: 20px;
-      }
     </style>
   </head>
   <body>
     <div class="container">
       <section id="main_content">
-        <dialog id="Insulter">
-          <div style="text-align: center;">
-          <h1 style="color:#24A6C7; border: 2px solid #24A6C7; border-radius: 5px; font-weight: bold;" >Insult Generator &#x26c4;</h1>
-          </div>
-          <p id="Insult_msg"></p>
-          <button class="Insult_Button" onclick="document.getElementById('Insulter').close()">OK</button>
-        </dialog>
-        <script>
-          let insults = [];
-          var title = document.getElementById('Insulter');
-          var msg = document.getElementById('Insult_msg');
-          fetch('../insults.json')
-            .then(response => response.json())
-            .then(data => {
-              insults = data;
-            })
-          .catch(error => console.error('Error loading list:', error));
-          
-          function show_list_iten() {
-            if (insults.length === 0) {
-              alert('List is still loading or empty!');
-              return;
-           }
-            var max = insults.length;
-            var index = Math.floor(Math.random() * max);
-            if (insults[index]) {
-              msg.textContent = insults[index].trim();
-              title.showModal();
-            } else {
-              alert('Index out of bounds!');
-              }
-            }
-        </script>
-        <div class = "Centered_div">
-          <button onclick="show_list_iten()" class = "Insult_Button" > For Insult </button>
-        </div>
+      
       </section>
     </div>
   </body>
