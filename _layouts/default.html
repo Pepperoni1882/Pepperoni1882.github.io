@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,post-viewport-fit=cover,initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <style>
+      dialog {
+        background-color: #000000; /* Changes the background color */
+        color: #24A6C7;            /* Changes the text color to contrast */
+        border: 5px solid #24A6C7; /* Optional: overrides default border */
+        border-radius: 8px;        /* Optional: rounds the corners */
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <section id="main_content">
         <dialog id="Insulter">
-          <h3>Insult Generator</h3>
+          <h1>Insult Generator</h1>
           <p id="Insult_msg"></p>
           <button onclick="document.getElementById('Insulter').close()">OK</button>
         </dialog>
