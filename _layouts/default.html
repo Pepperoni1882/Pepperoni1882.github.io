@@ -18,8 +18,14 @@
         display: grid;
         place-items: center;  /* Centers horizontally and vertically */
         min-height: 100vh;/* Takes up the full height of the screen */
+      }
+      .Insult_Button {
         color:#24A6C7;
         font-weight: bold;
+        background-color: #000000;
+        border: 5px solid #24A6C7;
+        border-radius: 8px; 
+        padding: 20px;
       }
     </style>
   </head>
@@ -58,7 +64,7 @@
             }
         </script>
         <div class = "Centered_div">
-          <button onclick="show_list_iten()">For Insult</button>
+          <button onclick="show_list_iten()" class = "Insult_Button" > For Insult </button>
         </div>
       </section>
     </div>
