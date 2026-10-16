@@ -13,6 +13,12 @@
         border-radius: 8px;        /* Optional: rounds the corners */
         padding: 20px;
       }
+      .Centered_div {
+        display: grid;
+        place-items: center;  /* Centers horizontally and vertically */
+        min-height: 100vh;/* Takes up the full height of the screen */
+        color:#24A6C7;
+      }
     </style>
   </head>
   <body>
@@ -49,7 +55,7 @@
               }
             }
         </script>
-        <div style="text-align: center;">
+        <div class = "Centered_div">
           <button style = "justify-content: center;" onclick="show_list_iten()">For Insult</button>
         </div>
       </section>
