@@ -11,14 +11,21 @@
         color: #24A6C7;
         margin: 0;
       }
+      .paddle {
+        background-color: #ffffff;
+        width:5px;
+        height:25px;
+      }
+      .ball {
+        background-color: #ffffff;
+        width:7px;
+        height:7px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <section id="main_content">
-            <h1>Press any key on your keyboard!</h1>
-            <p>Key pressed: <strong id="output">None</strong></p>
-
             <script>
                 // Listen for the 'keydown' event globally
                 document.addEventListener('keydown', function(event) {
@@ -27,10 +34,22 @@
         
                     // Example: Check for specific keys
                     if (event.key === 'ArrowUp') {
-                        console.log('Moving player up!');
+                        console.log('Moving player2 Up!');
+                    if (event.key === 'ArrowDown') {
+                        console.log('Moving player2 Down!');
+                    if (event.key === 'w') {
+                        console.log('Moving player1 Up!');
+                    if (event.key === 's') {
+                        console.log('Moving player1 Down!');
                     }
                 });
             </script>
+            <div class="paddle">
+              <div style="margin-left: 30px">
+              </div>
+              <div style="margin-right: 30px">
+              </div>
+            </div>
       </section>
     </div>
   </body>
