@@ -16,6 +16,21 @@
   <body>
     <div class="container">
       <section id="main_content">
+            <h1>Press any key on your keyboard!</h1>
+            <p>Key pressed: <strong id="output">None</strong></p>
+
+            <script>
+                // Listen for the 'keydown' event globally
+                document.addEventListener('keydown', function(event) {
+                    // event.key gives you the actual character or action (e.g., 'Enter', 'a', 'ArrowUp')
+                    document.getElementById('output').textContent = event.key;
+        
+                    // Example: Check for specific keys
+                    if (event.key === 'ArrowUp') {
+                        console.log('Moving player up!');
+                    }
+                });
+            </script>
       </section>
     </div>
   </body>
